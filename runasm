@@ -1,0 +1,5 @@
+name=$0
+_o=$name".o"
+_asm=$name".asm"
+nasm -f elf32 $_asm
+ld -m elf_i386 -s -o $name $_o
